@@ -103,37 +103,5 @@ para portfólio. Antes de usar em produção:
 
 ---
 
-## 4. Rodando localmente
-
-```bash
-npm install
-npm run dev       # ambiente de desenvolvimento
-npm run build     # build de produção em /dist
-npm run preview   # testa o build de produção localmente
-```
-
-## 5. Deploy
-
-```bash
-npm i -g vercel
-vercel
-```
-Ou conecte o repositório diretamente em [vercel.com](https://vercel.com) —
-mesmo fluxo do projeto DigitalPro.
-
----
-
-## 6. Próximos passos sugeridos (para deixar "produção de verdade")
-
-- [ ] Trocar ilustrações SVG por fotografia real do produto/fazenda
-- [ ] Conectar backend de checkout + gateway de pagamento
-- [ ] Configurar GTM com IDs reais (GA4, Google Ads, Meta Pixel/CAPI)
-- [ ] Rodar Google PageSpeed Insights e ajustar LCP se necessário
-- [ ] Configurar A/B test no headline do hero (maior impacto comprovado em testes de CRO)
-- [ ] Adicionar Hotjar ou Microsoft Clarity para heatmaps
-- [ ] Página de política de privacidade e termos reais (hoje são links placeholder)
-
----
-
 *Marca, produtos, depoimentos e dados de fazendas são fictícios — projeto
 desenvolvido para fins de portfólio.*
