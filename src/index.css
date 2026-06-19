@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #241510;
+  --color-roast: #3C2A1C;
+  --color-roast2: #4A3424;
+  --color-clay: #BF5B33;
+  --color-clayDark: #9C4626;
+  --color-ochre: #D6A24A;
+  --color-moss: #6B7752;
+  --color-parchment: #F2E9DA;
+  --color-paper: #EFE2CC;
+  --color-cream: #FAF5EC;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Work Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --ink: #241510;
+  --roast: #3C2A1C;
+  --roast2: #4A3424;
+  --clay: #BF5B33;
+  --clay-dark: #9C4626;
+  --ochre: #D6A24A;
+  --moss: #6B7752;
+  --parchment: #F2E9DA;
+  --paper: #EFE2CC;
+  --cream: #FAF5EC;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Fraunces', serif;
+}
+
+/* Visible keyboard focus everywhere — acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--ochre);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--ochre);
+  color: var(--ink);
+}
+
+/* Scrollbar leve, no tema */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--roast); }
+::-webkit-scrollbar-thumb { background: var(--clay); border-radius: 6px; }
+
+/* Halo duplo — garante contraste de elementos fixos (como a PourLine) que
+   passam por cima de seções claras E escuras, sem precisar detectar
+   qual seção está atrás. Duas sombras empilhadas (uma clara, uma escura);
+   sempre uma das duas "acende" contra o fundo. */
+.dual-halo-shape {
+  filter:
+    drop-shadow(0 0 0 1px rgba(36, 21, 16, 0.55))
+    drop-shadow(0 0 2px rgba(250, 245, 236, 0.45));
+}
+.dual-halo-text {
+  text-shadow:
+    0 0 1px rgba(36, 21, 16, 0.8),
+    0 0 1px rgba(36, 21, 16, 0.8),
+    0 1px 3px rgba(250, 245, 236, 0.35);
+}
+
+.grain {
+  position: relative;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}

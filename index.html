@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================ -->
+  <!-- PRIMARY SEO                                                   -->
+  <!-- ============================================================ -->
+  <title>Raiz Café — Café especial direto do produtor, torra fresca semanal</title>
+  <meta name="description" content="Café especial de origem única, comprado direto de pequenos produtores do Sul de Minas. Torra em pequenos lotes, enviado em até 7 dias da torra. Frete grátis acima de R$120." />
+  <meta name="keywords" content="café especial, café gourmet, café de origem, café artesanal, torra fresca, café direto do produtor" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.raizcafe.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Raiz Café" />
+  <meta property="og:title" content="Raiz Café — Café especial direto do produtor" />
+  <meta property="og:description" content="Café de origem única, torrado em pequenos lotes e enviado fresco. Direto do produtor para a sua xícara." />
+  <meta property="og:image" content="https://www.raizcafe.com.br/og-image.jpg" />
+  <meta property="og:url" content="https://www.raizcafe.com.br/" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Raiz Café — Café especial direto do produtor" />
+  <meta name="twitter:description" content="Café de origem única, torrado em pequenos lotes e enviado fresco. Direto do produtor para a sua xícara." />
+  <meta name="twitter:image" content="https://www.raizcafe.com.br/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="theme-color" content="#3C2A1C" />
+
+  <!-- ============================================================ -->
+  <!-- PERFORMANCE: preconnect + fonts                               -->
+  <!-- ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- ============================================================ -->
+  <!-- JSON-LD STRUCTURED DATA — ajuda SEO/Google Ads Quality Score  -->
+  <!-- ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Raiz Café",
+    "url": "https://www.raizcafe.com.br",
+    "logo": "https://www.raizcafe.com.br/logo.png",
+    "sameAs": [
+      "https://www.instagram.com/raizcafe",
+      "https://www.facebook.com/raizcafe"
+    ]
+  }
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- GOOGLE TAG MANAGER                                            -->
+  <!-- Troque GTM-XXXXXXX pelo ID real do seu container.             -->
+  <!-- O GTM dispara GA4, Meta Pixel/CAPI e Google Ads a partir daqui -->
+  <!-- só DEPOIS do consentimento de cookies (ver src/lib/consent.jsx) -->
+  <!-- ============================================================ -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+  </script>
+</head>
+<body class="bg-roast">
+  <!-- GTM (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
