@@ -4,3 +4,11 @@ Landing page premium para uma marca fictícia de café especial, construída com
 projeto de portfólio com foco em **conversão**, **performance** e **integração
 com Google Ads / Meta Ads**. Stack: **Vite + React 19 + Tailwind CSS v4 +
 Framer Motion**.
+
+---
+
+## 🔗 Acesse o projeto
+
+**[raizcafe.vercel.app/](https://raizcafe.vercel.app/)**
+
+---
